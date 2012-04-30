@@ -2,6 +2,7 @@ package net.sodaware.apollo
 {
     
     import flash.utils.Dictionary;
+	import net.sodaware.apollo.util.ObjectBag;
 
     /**
      * Manages entity tags. An entity can only have one group, but can
@@ -51,7 +52,7 @@ package net.sodaware.apollo
         public function removeTag(e:Entity, tag:String) : void
         {            
             var tagEntities:ObjectBag = this._getTagContainer(tag);
-            tagEntities.remove(e);
+            tagEntities.removeObject(e);
         }
         
         /**
@@ -90,7 +91,7 @@ package net.sodaware.apollo
             var entities:ObjectBag = new ObjectBag();
             
             // Fetch all tags
-            foreach (var tag:String in tagList) {
+            for each (var tag:String in tagList) {
                 var group:ObjectBag = this._getTagContainer(tag);
                 entities.addAll(entities);
             }

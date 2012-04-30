@@ -34,7 +34,7 @@ package net.sodaware.apollo
          */
         public function setName(e:Entity, name:String) : void
         {
-            this.nameLookup[tag] = e;
+            this.nameLookup[name] = e;
         }
         
         /**

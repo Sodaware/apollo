@@ -23,7 +23,7 @@ package tests.apollo
             var world:World = new World();
             var mockSystemA:MockEntitySystem = new MockEntitySystem();
             
-            world.getSystemManager().setSystem(mockSystemA);
+            world.getSystemManager().addSystem(mockSystemA);
             world.getSystemManager().initializeAll();
             
             var entity:Entity = world.createEntity();
