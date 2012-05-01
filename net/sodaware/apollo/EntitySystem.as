@@ -25,7 +25,7 @@ package net.sodaware.apollo
          * Create a new Entity system that is registered to a set of components.
          * @param types A list of Class types this system handles.
          */
-        public function EntitySystem(... types)
+        public function EntitySystem(types:Array)
         {
             
             // Setup list of activity entities
