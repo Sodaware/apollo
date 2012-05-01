@@ -187,10 +187,9 @@ package net.sodaware.apollo
 			// Check inputs
 			var length:int = 1;
 			var types:Array;
-			if (otherTypes) {
+			if (otherTypes && otherTypes.length > 0) {
+				otherTypes.shift();
 				types = new Array(1 + otherTypes.length);
-			} else {
-				otherTypes = new Array(1);
 			}
 			
             types[0] = requiredType;
